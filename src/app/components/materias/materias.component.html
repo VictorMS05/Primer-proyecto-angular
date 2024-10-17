@@ -1,0 +1,22 @@
+<div>
+    <label>{{texto}}</label>
+</div>
+
+
+<p>Horario de materias</p>
+<select (change)="getmateria($event)">Lista
+  @for (materia of materias; track materia.id) {
+    <option value="{{materia.id}}">{{materia.nombre}}</option>
+  }
+</select>
+
+
+@if (todaLista) {
+  <ul>
+    @for (materia of materias; track materia.id) {
+      <li>{{materia.nombre}}</li>
+    }
+  </ul>
+}
+
+<app-materia-detalles [materia]="materiaseleccionada" (notify)="onNotify($event)"></app-materia-detalles>

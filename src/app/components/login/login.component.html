@@ -1,0 +1,8 @@
+<div>
+  <h3 [hidden]="!is_auth">Bienvenido {{usuario.nombre}}</h3>
+  <label for="btn_login"></label>
+  <button name="btn_login" [disabled]="is_auth">Log-in</button>
+  <label for="btn_logout"></label>
+  <button name="btn_logout" [disabled]="!is_auth">Log-out</button>
+  
+</div>
